@@ -22,6 +22,19 @@ h2{font-size:1.5rem;margin:2.5rem 0 1rem}
 .btn:hover{background:#e14a1d}
 section{padding:3rem 1rem;max-width:960px;margin:auto}
 .video-grid{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.photo-grid{
+  display:grid;
+  gap:1.5rem;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+}
+.photo-grid img{
+  width:100%;
+  height:auto;
+  border-radius:8px;
+  object-fit:cover;
+  box-shadow:0 2px 4px rgba(0,0,0,.05);
+}
+
 footer{background:#fff;text-align:center;padding:2rem 1rem;margin-top:4rem;font-size:.875rem}
 nav{margin-top:1rem}
 nav a{margin:0 .5rem;color:var(--dark);text-decoration:none;position:relative;font-weight:600}
@@ -45,6 +58,7 @@ nav a:hover::after{width:100%;left:0}
   <nav>
     <a href="#live-show">Current Shows</a>
     <a href="#film-reel">Film & TV</a>
+    <a href="#photos">Photos</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </nav>
