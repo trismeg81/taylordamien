@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taylor Damien | Actor & Storyteller</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --accent:#ff5722;
+  --dark:#1a1a1a;
+  --light:#f5f5f5;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;line-height:1.6;color:var(--dark);background:var(--light)}
+header{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:4rem 1rem;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.05);}
+header img{width:160px;height:160px;border-radius:50%;object-fit:cover;margin-bottom:1rem}
+h1{font-size:2rem;margin-bottom:.5rem}
+h2{font-size:1.5rem;margin:2.5rem 0 1rem}
+.btn{display:inline-block;padding:.75rem 1.25rem;background:var(--accent);color:#fff;border-radius:6px;text-decoration:none;font-weight:600;transition:background .3s}
+.btn:hover{background:#e14a1d}
+section{padding:3rem 1rem;max-width:960px;margin:auto}
+.video-grid{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+footer{background:#fff;text-align:center;padding:2rem 1rem;margin-top:4rem;font-size:.875rem}
+nav{margin-top:1rem}
+nav a{margin:0 .5rem;color:var(--dark);text-decoration:none;position:relative;font-weight:600}
+nav a::after{content:'';position:absolute;width:0;height:2px;background:var(--accent);left:50%;bottom:-4px;transition:width .3s ease,left .3s ease}
+nav a:hover::after{width:100%;left:0}
+#contact-form{display:flex;flex-direction:column;gap:.75rem}
+#contact-form input,#contact-form textarea{padding:.75rem;border:1px solid #ccc;border-radius:4px;width:100%}
+#contact-form button{cursor:pointer}
+@media(max-width:600px){
+  header{padding:2.5rem 1rem}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <!-- Replace headshot.jpg with your own file -->
+  <img src="headshot.jpg" alt="Taylor Damien headshot">
+  <h1>Taylor Damien</h1>
+  <p>Story‑driven comedian & actor based in Austin, TX</p>
+  <nav>
+    <a href="#live-show">Touring Show</a>
+    <a href="#film-reel">Film & TV</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="sizzle">
+<h2>Reel</h2>
+<!-- Replace YouTube video ID -->
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+  <iframe src="https://www.youtube.com/embed/VIDEO_ID?autoplay=0&mute=1" 
+          style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+          frameborder="0" allowfullscreen></iframe>
+</div>
+</section>
+
+<section id="live-show">
+<h2>Judgement Day – Touring Improv Show</h2>
+<p>Ridiculous audience‑driven court cases, razor‑sharp improv, zero objections.</p>
+<div class="video-grid">
+  <!-- Replace VIDEO_IDs -->
+  <iframe src="https://www.youtube.com/embed/VIDEO_ID1" frameborder="0" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/VIDEO_ID2" frameborder="0" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/VIDEO_ID3" frameborder="0" allowfullscreen></iframe>
+</div>
+<a href="presskit.pdf" class="btn" target="_blank">Download Press Kit</a>
+</section>
+
+<section id="film-reel">
+<h2>Film & TV Highlights</h2>
+<div class="video-grid">
+  <iframe src="https://www.youtube.com/embed/DRAMA_ID" frameborder="0" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/COMEDY_ID" frameborder="0" allowfullscreen></iframe>
+</div>
+</section>
+
+<section id="about">
+<h2>About</h2>
+<p>I blend comedic timing with grounded storytelling to create characters audiences root for. Recent credits include <em>Judgement Day</em> (Fallout Theatre) and indie thriller <em>Black Box</em>. Trained at ColdTowne Conservatory and The Actor’s School. SAG‑AFTRA Eligible.</p>
+<a href="resume.pdf" class="btn" target="_blank">Download Résumé</a>
+</section>
+
+<section id="contact">
+<h2>Booking & Inquiries</h2>
+<form id="contact-form" action="https://formspree.io/f/yourformid" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="_replyto" placeholder="Your Email" required>
+  <textarea name="message" rows="5" placeholder="How can we collaborate?" required></textarea>
+  <button type="submit" class="btn">Send Message</button>
+</form>
+</section>
+
+<footer>
+  <p>© <span id="year"></span> Taylor Damien. All rights reserved.</p>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
