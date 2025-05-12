@@ -42,6 +42,7 @@ fetch(`https://api.github.com/repos/${GH_USER}/${GH_REPO}/contents/photos`)
       .filter(f => f.type === "file" && /\.jpe?g$|\.png$/i.test(f.name))
       .forEach(f => {
         const img = document.createElement("img");
+        img.loading = "lazy";             // ← add this line
         img.src = f.download_url;
         img.alt = f.name
           .replace(/[-_]/g, " ")
