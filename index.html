@@ -73,15 +73,14 @@ nav a:hover::after{width:100%;left:0}
 </section>
 
 <section id="live-show">
-<h2>Judgement Day – Touring Improv Show</h2>
-<p>Ridiculous audience‑driven court cases, razor‑sharp improv, zero objections.</p>
+<h2>Judgement Day – Improv Show at Fallout Theatre</h2>
+<p>Ridiculous audience‑driven court cases, razor‑sharp improv, some objections.</p>
 <div class="video-grid">
   <!-- Replace VIDEO_IDs -->
   <iframe src="https://www.youtube.com/embed/VIDEO_ID1" frameborder="0" allowfullscreen></iframe>
   <iframe src="https://www.youtube.com/embed/VIDEO_ID2" frameborder="0" allowfullscreen></iframe>
   <iframe src="https://www.youtube.com/embed/VIDEO_ID3" frameborder="0" allowfullscreen></iframe>
 </div>
-<a href="presskit.pdf" class="btn" target="_blank">Download Press Kit</a>
 </section>
 
 <section id="film-reel">
@@ -116,13 +115,30 @@ nav a:hover::after{width:100%;left:0}
 </section>
 
 <section id="contact">
-<h2>Booking & Inquiries</h2>
-<form id="contact-form" action="https://formspree.io/f/yourformid" method="POST">
-  <input type="text" name="name" placeholder="Your Name" required>
-  <input type="email" name="_replyto" placeholder="Your Email" required>
-  <textarea name="message" rows="5" placeholder="How can we collaborate?" required></textarea>
-  <button type="submit" class="btn">Send Message</button>
-</form>
+  <h2>Booking &amp; Inquiries</h2>
+
+  <form id="contact-form"
+        action="https://formspree.io/f/xyzwnvdq"   <!-- your Formspree endpoint -->
+        method="POST">
+
+    <input type="text"  name="name"  placeholder="Your Name"  required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5"
+              placeholder="How can we collaborate?" required></textarea>
+
+    <!-- optional extras -->
+    <input type="hidden" name="_subject"
+           value="New inquiry from taylordamien.com">
+    <input type="text"   name="_honeypot" style="display:none"> <!-- spam trap -->
+
+    <!-- ADD THESE TWO LINES -->
+    <input type="hidden" name="_redirect"
+           value="https://taylordamien.github.io/thanks.html">
+    <input type="hidden" name="_error"
+           value="https://taylordamien.github.io/error.html">
+
+    <button type="submit" class="btn">Send Message</button>
+  </form>
 </section>
 
 <footer>
