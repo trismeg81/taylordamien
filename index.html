@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --accent:#ff5722;
+  --accent:#4da6ff; /* light blue */
   --dark:#1a1a1a;
   --light:#f5f5f5;
 }
@@ -19,7 +19,7 @@ header img{width:160px;height:160px;border-radius:50%;object-fit:cover;margin-bo
 h1{font-size:2rem;margin-bottom:.5rem}
 h2{font-size:1.5rem;margin:2.5rem 0 1rem}
 .btn{display:inline-block;padding:.75rem 1.25rem;background:var(--accent);color:#fff;border-radius:6px;text-decoration:none;font-weight:600;transition:background .3s}
-.btn:hover{background:#e14a1d}
+.btn:hover{background:#3399ff}
 section{padding:3rem 1rem;max-width:960px;margin:auto}
 .video-grid{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
 .photo-grid{
@@ -51,7 +51,6 @@ nav a:hover::after{width:100%;left:0}
 <body>
 
 <header>
-  <!-- Replace headshot.jpg with your own file -->
   <img src="images/headshot.jpg" alt="Taylor Damien headshot">
   <h1>Taylor Damien</h1>
   <p>Story‑driven Comedian & Actor based in Austin, TX</p>
@@ -67,7 +66,6 @@ nav a:hover::after{width:100%;left:0}
 <section id="sizzle">
 <h2>Reel</h2>
 <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
-  <!-- Updated to real video embed -->
   <iframe src="https://www.youtube.com/embed/-KtSr15m9p4?autoplay=0&mute=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allowfullscreen></iframe>
 </div>
 </section>
@@ -79,7 +77,6 @@ nav a:hover::after{width:100%;left:0}
   <img src="images/JDPoster.jpg" alt="Judgement Day Show Poster" style="display:block;margin:1.5rem auto;max-width:50%;height:auto;border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,.1);">
   
 <div class="video-grid">
-  <!-- Replace VIDEO_IDs -->
   <iframe src="https://www.youtube.com/embed/VIDEO_ID1" frameborder="0" allowfullscreen></iframe>
   <iframe src="https://www.youtube.com/embed/VIDEO_ID2" frameborder="0" allowfullscreen></iframe>
   <iframe src="https://www.youtube.com/embed/VIDEO_ID3" frameborder="0" allowfullscreen></iframe>
@@ -94,12 +91,10 @@ nav a:hover::after{width:100%;left:0}
 </div>
 </section>
 
-<!-- NEW PRODUCTION PHOTOS SECTION -->
 <section id="photos">
 <h2>Production Photos</h2>
 <p>A glimpse behind the scenes and on stage.</p>
 <div class="photo-grid">
-  <!-- Replace photo1.jpg etc. after uploading images/photos folder -->
   <img src="photos/photo1.jpg" alt="Production still 1">
   <img src="photos/photo2.jpg" alt="Production still 2">
   <img src="photos/photo3.jpg" alt="Production still 3">
@@ -131,12 +126,9 @@ nav a:hover::after{width:100%;left:0}
     <textarea name="message" rows="5"
               placeholder="How can we collaborate?" required></textarea>
 
-    <!-- optional extras -->
     <input type="hidden" name="_subject"
            value="New inquiry from taylordamien.com">
-    <input type="text"   name="_honeypot" style="display:none"> <!-- spam trap -->
-
-    <!-- ADD THESE TWO LINES -->
+    <input type="text"   name="_honeypot" style="display:none">
     <input type="hidden" name="_redirect"
            value="https://taylordamien.github.io/thanks.html">
     <input type="hidden" name="_error"
