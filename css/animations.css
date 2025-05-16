@@ -3,10 +3,11 @@ header h1 {
   white-space: nowrap;
   border-right: 2px solid black;
   animation: typing 3.45s steps(30, end), blink 0.75s step-end 4;
-  width: 0;
-  display: inline-block;
+  width: fit-content;
+  display: block;
   animation-delay: 0s;
   animation-fill-mode: forwards;
+  margin: 0 auto;
 }
 
 header p {
@@ -14,10 +15,11 @@ header p {
   white-space: nowrap;
   border-right: 2px solid black;
   animation: typing 3.45s steps(40, end), blink 0.75s step-end 4;
-  width: 0;
-  display: inline-block;
+  width: fit-content;
+  display: block;
   animation-delay: 3.6s;
   animation-fill-mode: forwards;
+  margin: 0 auto;
 }
 
 @keyframes typing {
@@ -29,4 +31,3 @@ header p {
   0%, 100% { border-color: black; }
   50% { border-color: transparent; }
 }
-
