@@ -1,1 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | Taylor Damien</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      text-decoration: none;
+      color: #457b9d;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .gallery-section {
+      margin-bottom: 4rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.03);
+    }
+
+    .caption {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <section style="padding: 2rem 1.5rem; max-width: 1000px; margin: auto;">
+    <a href="index.html" class="back-link">← Back to Home</a>
+    <h1>Photo Gallery</h1>
+    <p>Selected images from stage productions, behind the scenes, and movement work.</p>
+
+    <!-- Headshots -->
+    <div class="gallery-section">
+      <h2>Headshots</h2>
+      <div class="gallery-grid">
+        <div>
+          <img src="images/headshot.jpg" alt="Headshot 1">
+          <div class="caption">Classic theatrical headshot</div>
+        </div>
+        <div>
+          <img src="images/Damienheadshot.jpg" alt="Headshot 2">
+          <div class="caption">Film & TV style headshot</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Production Photos -->
+    <div class="gallery-section">
+      <h2>Production Photos</h2>
+      <div class="gallery-grid">
+        <div>
+          <img src="images/JDPoster.jpg" alt="Stage show poster">
+          <div class="caption">Poster from a solo stage show</div>
+        </div>
+        <!-- Add more production images here -->
+      </div>
+    </div>
+
+    <!-- Behind the Scenes -->
+    <div class="gallery-section">
+      <h2>Behind the Scenes</h2>
+      <div class="gallery-grid">
+        <div>
+          <img src="images/placeholder.jpg" alt="BTS 1">
+          <div class="caption">On set of short film (placeholder)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Movement Shots -->
+    <div class="gallery-section">
+      <h2>Movement Shots</h2>
+      <div class="gallery-grid">
+        <div>
+          <img src="images/placeholder.jpg" alt="Movement work">
+          <div class="caption">Improvisational moment (placeholder)</div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</body>
+</html>
 <!-- Gallery Page Placeholder -->
