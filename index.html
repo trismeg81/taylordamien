@@ -151,16 +151,30 @@
 </head>
 <body>
   <section class="hero">
-    <h1 class="big-title">Taylor Damien</h1>
-    <div class="slideshow-container">
-      <img src="images/headshots/headshot.jpg" alt="Taylor Damien Headshot" class="slideshow-image active" />
-      <img src="images/production/axe.jpg" alt="Stage Performance Photo" class="slideshow-image" />
-      <img src="images/production/intimate.jpg" alt="Stage Performance Photo" class="slideshow-image" />
-      <img src="images/production/smoking.jpg" alt="Stage Performance Photo" class="slideshow-image" />
-      <!-- Add more images as needed for production and film photos -->
+  <div class="slideshow-container">
+    <div class="slide fade">
+      <img src="images/headshots/headshot.jpg" alt="Taylor Damien Headshot">
     </div>
-    <p class="subtitle">Actor · Writer · Producer · Storyteller</p>
-  </section>
+    <div class="slide fade">
+      <img src="images/production/axe.jpg" alt="Stage Performance Photo">
+    </div>
+    <div class="slide fade">
+      <img src="images/production/intimate.jpg" alt="Stage Performance Photo">
+    </div>
+    <div class="slide fade">
+      <img src="images/production/smoking.jpg" alt="Stage Performance Photo">
+    </div>
+    <!-- Navigation dots -->
+    <div class="dots">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+  </div>
+  <h1 class="big-title">Taylor Damien</h1>
+  <h2 class="subtitle">Actor · Writer · Producer · Storyteller</h2>
+</section>
 
   <nav class="links">
     <a href="#projects" class="nav-link">Work</a>
