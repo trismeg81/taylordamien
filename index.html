@@ -1,87 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Damien Boykin | Actor</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="reels.html">Reels</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
-  <main>
-
-    <!-- Hero – David Lee Huynh style (Dec 2025) -->
-    <section class="hero">
-      <div class="hero-container">
-        <!-- Name + Tagline -->
-        <div class="hero-text">
-          <h1>Damien Boykin</h1>
-          <p class="tagline">Actor</p>
-        </div>
-
-        <!-- Headshot (left-aligned under name) -->
-        <div class="hero-headshot">
-          <img src="images/headshots/professionalheadshot.jpg" alt="Damien Boykin Headshot" loading="lazy">
-        </div>
-
-        <!-- Scroll down arrow -->
-        <div class="scroll-down">
-          <span>↓</span>
-        </div>
+  <header class="site-header">
+    <div class="container header-grid">
+      <div class="name-location">
+        <h1>Damien Boykin</h1>
+        <p class="location">Austin, TX</p>
       </div>
-    </section>
+      <nav class="main-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="resume.html">Resumé</a>
+        <a href="reels.html">Reels</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Brief About Bio -->
-    <section id="about-preview">
-      <h2>About</h2>
-      <p class="bio">
-        Damien Boykin is a versatile actor with a passion for authentic storytelling. 
-        Trained at [Your School/Studio], he brings depth and truth to every role — 
-        from intense dramatic leads to grounded comedic performances. 
-        Based in [Your City]. Represented by [Agency or “Open to representation”].
-      </p>
-    </section>
+  <main class="container home-grid">
+    <div class="headshot">
+      <img src="images/headshots/professionalheadshot.jpg" alt="Damien Boykin headshot">
+    </div>
 
-    <!-- Selected Works Teaser -->
-    <section id="works-preview">
-      <h2>Selected Works</h2>
-      <div class="grid">
-        <figure class="grid-item">
-          <img src="images/production/production1.jpg" alt="Project 1" loading="lazy">
-          <figcaption>Title of Project • Role</figcaption>
-        </figure>
-        <figure class="grid-item">
-          <img src="images/production/production2.jpg" alt="Project 2" loading="lazy">
-          <figcaption>Title of Project • Role</figcaption>
-        </figure>
-        <figure class="grid-item">
-          <img src="images/production/production3.jpg" alt="Project 3" loading="lazy">
-          <figcaption>Title of Project • Role</figcaption>
-        </figure>
-      </div>
-      <div style="text-align:center; margin-top: 3rem;">
-        <a href="gallery.html" class="resume-btn">View Full Gallery →</a>
-      </div>
-    </section>
+    <div class="credits">
+      <section class="upcoming">
+        <h2>Upcoming</h2>
+        <p><strong>“TBA”</strong> – Austin – Dir. TBA (stage play)<br>
+           <strong>Workshop</strong> – “New Works Festival” – Summer 2026<br>
+           More TBA...</p>
+      </section>
 
+      <section class="previous">
+        <h2>Previous</h2>
+        <p><strong>“Alias Grace”</strong> – James McDermott – Dir. Blake Robison<br>
+           <strong>A Christmas Carol</strong> – Dick Wilkins – Dir. Blake Robsion<br>
+           Various theater & indie film credits available on résumé</p>
+      </section>
+
+      <a href="contact.html" class="cta-button">Contact Me</a>
+    </div>
   </main>
-
-  <footer>
-    <p>© 2025 Damien Boykin. All rights reserved.</p>
-  </footer>
 
   <script src="javascript/script.js"></script>
 </body>
