@@ -37,11 +37,11 @@ body {
 
 .name-location h1 {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(3rem, 7vw, 5.5rem);   /* ← reduced from 9rem max */
-  font-weight: 700;
+  font-size: clamp(2.8rem, 6.5vw, 4.8rem);   /* ← reduced from 9rem max */
+  font-weight: 600;
   letter-spacing: -0.04em;
   color: #1a1a1a;
-  line-height: 0.94;
+  line-height: 0.95;
   white-space: nowrap;                  /* ← forces "Damien Boykin" to stay on one line */
 }
 
