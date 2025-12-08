@@ -1,82 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Damien Boykin - Actor</title>
-    <link rel="stylesheet" href="css/style.css"> <!-- Assumes your CSS folder -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Damien Boykin | Actor</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav">
-        <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#headshots">Headshots</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <img src="images/headshots/professionalheadshot.jpg" 
-             alt="Damien Boykin – Professional Headshot" 
-             class="hero-image">
-        <div class="hero-content">
-            <h1>Damien Boykin</h1>
-            <p class="tagline">Actor • Austin</p>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="reels.html">Reels</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- Hero – David Lee Huynh style (Dec 2025) -->
+    <section class="hero">
+      <div class="hero-container">
+        <!-- Name + Tagline -->
+        <div class="hero-text">
+          <h1>Damien Boykin</h1>
+          <p class="tagline">Actor</p>
         </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <h2>Recent Projects</h2>
-        <div class="projects-grid">
-            <!-- Add your production images here – e.g., from images/production/ -->
-            <div class="project-card">
-                <img src="images/production/axe-still-1.jpg" alt="Axe Project"> <!-- Replace with real path -->
-                <h3>Axe</h3>
-                <p>Lead role in indie thriller.</p>
-            </div>
-            <!-- Add 2-3 more cards with your images -->
+        <!-- Headshot (left-aligned under name) -->
+        <div class="hero-headshot">
+          <img src="images/headshots/professionalheadshot.jpg" alt="Damien Boykin Headshot" loading="lazy">
         </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About</h2>
-        <p>Damien Boykin is a dynamic actor based in Austin, Texas. With a passion for storytelling, he brings characters to life across film, theater, and television. Trained at [your training], Damien's work has been featured in [projects].</p>
-        <!-- Your full bio here -->
-    </section>
-
-    <!-- Headshots Section -->
-    <section id="headshots" class="headshots-section">
-        <h2>Headshots</h2>
-        <div class="headshots-grid">
-            <img src="images/headshots/professionalheadshot.jpg" alt="Professional Headshot">
-            <img src="images/headshots/smilingheadshot.jpg" alt="Smiling Headshot">
-            <!-- Add more from headshots folder -->
+        <!-- Scroll down arrow -->
+        <div class="scroll-down">
+          <span>↓</span>
         </div>
+      </div>
     </section>
 
-    <!-- Resume -->
-    <section class="resume">
-        <a href="downloads/resume.pdf" download class="resume-btn">Download Resume</a> <!-- Update path if needed -->
+    <!-- Brief About Bio -->
+    <section id="about-preview">
+      <h2>About</h2>
+      <p class="bio">
+        Damien Boykin is a versatile actor with a passion for authentic storytelling. 
+        Trained at [Your School/Studio], he brings depth and truth to every role — 
+        from intense dramatic leads to grounded comedic performances. 
+        Based in [Your City]. Represented by [Agency or “Open to representation”].
+      </p>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Contact</h2>
-        <form action="https://formspree.io/f/your-id" method="POST"> <!-- Replace with your Formspree ID -->
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-        <p>Email: damien@example.com</p>
+    <!-- Selected Works Teaser -->
+    <section id="works-preview">
+      <h2>Selected Works</h2>
+      <div class="grid">
+        <figure class="grid-item">
+          <img src="images/production/production1.jpg" alt="Project 1" loading="lazy">
+          <figcaption>Title of Project • Role</figcaption>
+        </figure>
+        <figure class="grid-item">
+          <img src="images/production/production2.jpg" alt="Project 2" loading="lazy">
+          <figcaption>Title of Project • Role</figcaption>
+        </figure>
+        <figure class="grid-item">
+          <img src="images/production/production3.jpg" alt="Project 3" loading="lazy">
+          <figcaption>Title of Project • Role</figcaption>
+        </figure>
+      </div>
+      <div style="text-align:center; margin-top: 3rem;">
+        <a href="gallery.html" class="resume-btn">View Full Gallery →</a>
+      </div>
     </section>
 
-    <script src="javascript/script.js"></script>
+  </main>
+
+  <footer>
+    <p>© 2025 Damien Boykin. All rights reserved.</p>
+  </footer>
+
+  <script src="javascript/script.js"></script>
 </body>
 </html>
