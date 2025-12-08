@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Damien Boykin - Actor</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css"> <!-- Assumes your CSS folder -->
 </head>
 <body>
     <!-- Navigation -->
@@ -13,67 +13,70 @@
             <li><a href="#hero">Home</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#headshots">Headshots</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-  <!-- Hero Section -->
-<section id="hero" class="hero">
-    <!-- Background headshot – fills the entire screen -->
-    <img src="images/headshots/professionalheadshot.jpg"
-         alt="Damien Boykin"
-         class="hero-image">
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <img src="images/headshots/professionalheadshot.jpg" 
+             alt="Damien Boykin – Professional Headshot" 
+             class="hero-image">
+        <div class="hero-content">
+            <h1>Damien Boykin</h1>
+            <p class="tagline">Actor • Austin</p>
+        </div>
+    </section>
 
-    <!-- Name + tagline on top of the image -->
-    <div class="hero-content">
-        <h1>Damien Boykin</h1>
-        <p class="tagline">Actor • Austin</p>
-    </div>
-</section>
-
-    <!-- Projects/Upcoming Section -->
+    <!-- Projects Section -->
     <section id="projects" class="projects">
-        <h2>Upcoming Projects</h2>
+        <h2>Recent Projects</h2>
         <div class="projects-grid">
-            <!-- Add 3-4 project cards like David's -->
+            <!-- Add your production images here – e.g., from images/production/ -->
             <div class="project-card">
-                <img src="path/to/project1.jpg" alt="Project 1"> <!-- Use your images -->
-                <h3>TBA Austin Show</h3>
-                <p>Short description.</p>
+                <img src="images/production/axe-still-1.jpg" alt="Axe Project"> <!-- Replace with real path -->
+                <h3>Axe</h3>
+                <p>Lead role in indie thriller.</p>
             </div>
-            <!-- Repeat for more -->
+            <!-- Add 2-3 more cards with your images -->
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
         <h2>About</h2>
-        <p>Your current bio here: "Damien Boykin is an actor and storyteller based out of Austin, TX. He studied acting at the Stella Adler Studio of Acting 3-Year Professional Conservatory in NYC. Before that, he studied improv at iO and Annoyance theatres in Chicago." (paste your full bio).</p>
-        <!-- Add headshots grid -->
+        <p>Damien Boykin is a dynamic actor based in Austin, Texas. With a passion for storytelling, he brings characters to life across film, theater, and television. Trained at [your training], Damien's work has been featured in [projects].</p>
+        <!-- Your full bio here -->
+    </section>
+
+    <!-- Headshots Section -->
+    <section id="headshots" class="headshots-section">
+        <h2>Headshots</h2>
         <div class="headshots-grid">
-            <img src="path/to/headshot1.jpg" alt="Headshot 1"> <!-- Your headshots -->
-            <img src="path/to/headshot2.jpg" alt="Headshot 2">
-            <!-- Add more, 4-6 total -->
+            <img src="images/headshots/professionalheadshot.jpg" alt="Professional Headshot">
+            <img src="images/headshots/smilingheadshot.jpg" alt="Smiling Headshot">
+            <!-- Add more from headshots folder -->
         </div>
     </section>
 
     <!-- Resume -->
     <section class="resume">
-        <a href="path/to/resume.pdf" download class="resume-btn">Download Resume</a> <!-- Link your PDF -->
+        <a href="downloads/resume.pdf" download class="resume-btn">Download Resume</a> <!-- Update path if needed -->
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <h2>Contact</h2>
-        <form action="https://formspree.io/f/your-form-id" method="POST"> <!-- Use Formspree or similar for submissions; sign up free -->
+        <form action="https://formspree.io/f/your-id" method="POST"> <!-- Replace with your Formspree ID -->
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
+            <button type="submit">Send</button>
         </form>
-        <p>Or email: your.email@example.com</p> <!-- Your contact info -->
+        <p>Email: damien@example.com</p>
     </section>
 
-    <script src="script.js"></script>
+    <script src="javascript/script.js"></script>
 </body>
 </html>
