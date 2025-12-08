@@ -18,10 +18,9 @@ body {
   padding: 0 20px;
 }
 
-/* Header */
+/* Header – much tighter */
 .site-header {
-  padding: 40px 0 60px;
-  border-bottom: none;
+  padding: 40px 0 20px;   /* was 40px 0 60px → drastically reduce bottom padding */
 }
 
 .header-grid {
@@ -35,20 +34,22 @@ body {
   flex-shrink: 0;              /* ← stops the nav from shrinking too early */
 }
 
+/* Space between name and "Austin, TX" */
 .name-location h1 {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(2.8rem, 6.5vw, 4.8rem);   /* ← reduced from 9rem max */
+  font-size: clamp(2.8rem, 6.5vw, 4.8rem);
   font-weight: 600;
   letter-spacing: -0.04em;
   color: #1a1a1a;
   line-height: 0.95;
-  white-space: nowrap;                  /* ← forces "Damien Boykin" to stay on one line */
+  white-space: nowrap;
+  margin-bottom: 4px;     /* ADD THIS LINE – was default ~1rem */
 }
 
 .location {
   font-size: 1.4rem;
   color: #666;
-  margin-top: 12px;
+  margin-top: 0;          /* CHANGE from 12px to 0 */
   font-weight: 300;
 }
 
@@ -66,13 +67,13 @@ body {
   color: #000;
 }
 
-/* Home grid */
+/* Main hero section – remove the huge top padding that’s killing you */
 .home-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   align-items: start;
-  padding: 80px 0 120px;
+  padding: 30px 0 120px;   /* CHANGE from 80px 0 120px → 30px is perfect */
 }
 
 .headshot img {
