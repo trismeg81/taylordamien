@@ -1,100 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Taylor Damien</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damien Boykin - Actor</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <nav class="links">
-      <a href="projects.html" class="nav-link">Work</a>
-      <a href="about.html" class="nav-link">About</a>
-      <a href="gallery.html" class="nav-link">Gallery</a>
-      <a href="files/resume.pdf" class="nav-link">Resume</a>
-      <a href="mailto:contact@taylordamien.com" class="nav-link">Contact</a>
+    <!-- Navigation -->
+    <nav class="nav">
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="slideshow-container">
-        <div class="slide fade">
-          <img src="images/headshots/headshot.jpg" alt="Headshot">
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>Damien Boykin</h1>
+            <p class="tagline">Actor | Storyteller | Austin Based</p> <!-- Adapt your tagline -->
         </div>
-        <div class="slide fade">
-          <img src="images/production/axe.jpg" alt="Production shot with axe">
+    </section>
+
+    <!-- Projects/Upcoming Section -->
+    <section id="projects" class="projects">
+        <h2>Upcoming Projects</h2>
+        <div class="projects-grid">
+            <!-- Add 3-4 project cards like David's -->
+            <div class="project-card">
+                <img src="path/to/project1.jpg" alt="Project 1"> <!-- Use your images -->
+                <h3>TBA Austin Show</h3>
+                <p>Short description.</p>
+            </div>
+            <!-- Repeat for more -->
         </div>
-        <div class="slide fade">
-          <img src="images/production/intimate.jpg" alt="Intimate production shot">
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About</h2>
+        <p>Your current bio here: "Damien Boykin is an actor and storyteller based out of Austin, TX. He studied acting at the Stella Adler Studio of Acting 3-Year Professional Conservatory in NYC. Before that, he studied improv at iO and Annoyance theatres in Chicago." (paste your full bio).</p>
+        <!-- Add headshots grid -->
+        <div class="headshots-grid">
+            <img src="path/to/headshot1.jpg" alt="Headshot 1"> <!-- Your headshots -->
+            <img src="path/to/headshot2.jpg" alt="Headshot 2">
+            <!-- Add more, 4-6 total -->
         </div>
-        <div class="slide fade">
-          <img src="images/production/smoking.jpg" alt="Smoking production shot">
-        </div>
-      </div>
-      <div class="dots">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-      </div>
-      <h1 class="big-title">Taylor Damien</h1>
-      <p class="subtitle">Actor · Writer · Producer · Storyteller</p>
     </section>
 
-    <section>
-      <h2>About Taylor Damien</h2>
-      <p>Trained at the Stella Adler Conservatory, I’m an actor and performer dedicated to bringing stories to life through stage and screen. My work spans acting, writing, and producing, with a focus on creating authentic, engaging narratives. I’ve performed in diverse settings, from theaters to film sets, and I’m passionate about connecting with audiences through humor, depth, and movement-based performance.</p>
-      <p>My experience includes collaborations with directors, writers, and performers across various projects, from solo shows to short films. I’m always exploring new ways to tell stories that resonate and inspire.</p>
+    <!-- Resume -->
+    <section class="resume">
+        <a href="path/to/resume.pdf" download class="resume-btn">Download Resume</a> <!-- Link your PDF -->
     </section>
 
-    <section>
-      <h2>Work</h2>
-      <div>
-        <h3>Einstein: Light in the Labyrinth</h3>
-        <p>One-man stage show. A journey into Albert Einstein’s mind, blending science and solo performance. In development. Written and performed by Taylor Damien.</p>
-        <p>Video coming soon.</p>
-      </div>
-      <div>
-        <h3>The Door That Talks</h3>
-        <p>Short film. A comedic, surreal story about communication, featuring a talkative apartment door. In post-production. Written and performed by Taylor Damien.</p>
-        <p>Video coming soon.</p>
-      </div>
-      <div>
-        <h3>Acting Reel</h3>
-        <p>Compilation reel showcasing range and presence across stage and screen. Coming soon.</p>
-        <p>Video coming soon.</p>
-      </div>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <form action="https://formspree.io/f/your-form-id" method="POST"> <!-- Use Formspree or similar for submissions; sign up free -->
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p>Or email: your.email@example.com</p> <!-- Your contact info -->
     </section>
 
-    <section>
-      <h2>Gallery</h2>
-      <div>
-        <img src="images/headshots/headshot.jpg" alt="Headshot">
-        <img src="images/production/axe.jpg" alt="Production shot with axe">
-        <img src="images/production/intimate.jpg" alt="Intimate production shot">
-        <img src="images/production/smoking.jpg" alt="Smoking production shot">
-      </div>
-      <a href="gallery.html">See More</a>
-    </section>
-
-    <section>
-      <h2>Resume</h2>
-      <a href="files/resume.pdf">Download Resume</a>
-    </section>
-
-    <section>
-      <h2>Contact</h2>
-      <a href="mailto:contact@taylordamien.com">Email Me</a>
-    </section>
-  </main>
-
-  <footer>
-    <p>© Taylor Damien</p>
-  </footer>
-
-  <script src="javascript/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
