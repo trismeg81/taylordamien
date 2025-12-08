@@ -27,16 +27,22 @@ body {
 .header-grid {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;         /* ← changed from flex-start to center */
+  flex-wrap: nowrap;           /* ← prevents nav from wrapping under the name */
+}
+
+.main-nav {
+  flex-shrink: 0;              /* ← stops the nav from shrinking too early */
 }
 
 .name-location h1 {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(4rem, 10vw, 9rem);
+  font-size: clamp(3.5rem, 8vw, 7rem);   /* ← reduced from 9rem max */
   font-weight: 700;
   letter-spacing: -0.04em;
   color: #1a1a1a;
-  line-height: 0.9;
+  line-height: 0.92;
+  white-space: nowrap;                  /* ← forces "Damien Boykin" to stay on one line */
 }
 
 .location {
