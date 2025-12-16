@@ -291,32 +291,72 @@
 
   <script src="javascript/script.js"></script>
 
-  <!-- Existing Lightbox JS (unchanged) -->
-  <script>
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const closeBtn = document.querySelector('.lightbox-close');
-    const galleryItems = document.querySelectorAll('.gallery-item');
+<script>
+// Enhanced lightbox with next/prev navigation
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const closeBtn = document.querySelector('.lightbox-close');
+const prevBtn = document.querySelector('.lightbox-prev');
+const nextBtn = document.querySelector('.lightbox-next');
+const galleryItems = Array.from(document.querySelectorAll('.gallery-item')); // Convert to array for indexing
 
-    galleryItems.forEach(item => {
-      item.addEventListener('click', e => {
-        e.preventDefault();
-        lightboxImg.src = item.href;
-        lightboxImg.alt = item.querySelector('img').alt;
-        lightbox.style.display = 'flex';
-      });
-    });
+let currentIndex = 0;
 
-    closeBtn.addEventListener('click', () => {
-      lightbox.style.display = 'none';
-    });
+// Open lightbox at specific index
+function openLightbox(index) {
+  currentIndex = index;
+  const item = galleryItems[currentIndex];
+  lightboxImg.src = item.href;
+  lightboxImg.alt = item.querySelector('img').alt;
+  lightbox.style.display = 'flex';
+}
 
-    lightbox.addEventListener('click', e => {
-      if (e.target === lightbox) {
-        lightbox.style.display = 'none';
-      }
-    });
-  </script>
+// Close lightbox
+function closeLightbox() {
+  lightbox.style.display = 'none';
+}
+
+// Go to next image
+function nextImage() {
+  currentIndex = (currentIndex + 1) % galleryItems.length;
+  lightboxImg.src = galleryItems[currentIndex].href;
+  lightboxImg.alt = galleryItems[currentIndex].querySelector('img').alt;
+}
+
+// Go to previous image
+function prevImage() {
+  currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+  lightboxImg.src = galleryItems[currentIndex].href;
+  lightboxImg.alt = galleryItems[currentIndex].querySelector('img').alt;
+}
+
+// Click on thumbnail
+galleryItems.forEach((item, index) => {
+  item.addEventListener('click', e => {
+    e.preventDefault();
+    openLightbox(index);
+  });
+});
+
+// Button clicks
+if (prevBtn) prevBtn.addEventListener('click', prevImage);
+if (nextBtn) nextBtn.addEventListener('click', nextImage);
+
+// Close actions
+closeBtn.addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', e => {
+  if (e.target === lightbox) closeLightbox();
+});
+
+// Keyboard navigation
+document.addEventListener('keydown', e => {
+  if (lightbox.style.display === 'flex') {
+    if (e.key === 'ArrowRight') nextImage();
+    if (e.key === 'ArrowLeft') prevImage();
+    if (e.key === 'Escape') closeLightbox();
+  }
+});
+</script>
 
   <!-- NEW: Masonry layout JavaScript (eliminates white gaps) -->
   <script>
