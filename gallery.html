@@ -278,11 +278,16 @@
     </div>
   </main>
 
-  <!-- Lightbox and scripts remain the same -->
-  <div id="lightbox" class="lightbox">
-    <span class="lightbox-close">&times;</span>
-    <img id="lightbox-img" class="lightbox-content" src="" alt="">
-  </div>
+ <!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close">&times;</span>
+  
+  <!-- NEW: Prev/Next buttons -->
+  <button class="lightbox-prev" aria-label="Previous image">&#8249;</button>
+  <button class="lightbox-next" aria-label="Next image">&#8250;</button>
+  
+  <img id="lightbox-img" class="lightbox-content" src="" alt="">
+</div>
 
   <script src="javascript/script.js"></script>
 
