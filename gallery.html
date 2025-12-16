@@ -31,12 +31,54 @@
     <h2>Headshots & Production Stills</h2>
     
     <div class="gallery-grid">
-      <img src="images/headshots/professionalheadshot1.jpg" alt="Headshot 1">
-      <img src="images/headshots/professionalheadshot2.jpg" alt="Headshot 2">
-      <!-- Add more images here – just upload them to images/headshots/ or images/gallery/ first -->
+      <!-- Example images – add/replace with all your photos -->
+      <a href="images/headshots/professionalheadshot1.jpg" class="gallery-item">
+        <img src="images/headshots/professionalheadshot1.jpg" alt="Professional headshot 1" loading="lazy">
+      </a>
+      <a href="images/headshots/professionalheadshot2.jpg" class="gallery-item">
+        <img src="images/headshots/professionalheadshot2.jpg" alt="Professional headshot 2" loading="lazy">
+      </a>
+      <!-- Add more like this for production stills, e.g.:
+      <a href="images/gallery/production-still-1.jpg" class="gallery-item">
+        <img src="images/gallery/production-still-1.jpg" alt="From Alias Grace production" loading="lazy">
+      </a>
+      -->
     </div>
   </main>
 
+  <!-- Simple Lightbox Modal (hidden until clicked) -->
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightbox-img" class="lightbox-content" src="" alt="">
+  </div>
+
   <script src="javascript/script.js"></script>
+  <!-- Lightbox JS (add this to your existing script.js or here inline) -->
+  <script>
+    // Simple vanilla JS lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.lightbox-close');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    galleryItems.forEach(item => {
+      item.addEventListener('click', e => {
+        e.preventDefault();
+        lightboxImg.src = item.href;
+        lightboxImg.alt = item.querySelector('img').alt;
+        lightbox.style.display = 'flex';
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+
+    lightbox.addEventListener('click', e => {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
