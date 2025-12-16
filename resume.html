@@ -6,32 +6,33 @@
     <title>Damien Boykin | Résumé</title>
     <meta name="description" content="Acting résumé of Damien Boykin including film, television, theater, training, and contact information.">
     
-    <!-- Google Fonts -->
+    <!-- Google Fonts (matched to index.html weights) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     
     <!-- Your CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <!-- Paste your exact header/nav code here (same as on other pages) -->
-        <!-- Example based on your current structure: -->
-        <nav class="navbar">
-            <div class="logo">Damien Boykin</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="resume.html" class="active">Resume</a></li>
-                <li><a href="reels.html">Reels</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <header class="site-header">
+        <div class="container header-grid">
+            <div class="name-location">
+                <h1>Damien Boykin</h1>
+                <p class="location">Austin, TX</p>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="resume.html" class="active">Resumé</a>
+                <a href="reels.html">Reels</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
     </header>
 
-    <main class="resume-page">
+    <main class="container">  <!-- Added .container for consistency with index.html -->
         <section class="resume-container">
             <div class="resume-header">
                 <h1>Résumé</h1>
@@ -39,21 +40,18 @@
                     <a href="downloads/DamienBoykinResume.pdf" download>Download PDF</a>
                 </p>
             </div>
-
             <!-- Embedded PDF – responsive and full-width -->
             <div class="pdf-embed">
                 <embed src="downloads/DamienBoykinResume.pdf" type="application/pdf" width="100%" height="1100px">
             </div>
-
-            <!-- Fallback for browsers that don't support embed -->
+            <!-- Fallback -->
             <p class="fallback">
-                If the résumé doesn't display above, <a href="downloads/DamienBoykinResume.pdf" target="_blank">click here to view it</a> or 
+                If the résumé doesn't display above, <a href="downloads/DamienBoykinResume.pdf" target="_blank">click here to view it</a> or
                 <a href="downloads/DamienBoykinResume.pdf" download>download the PDF</a>.
             </p>
         </section>
     </main>
 
-    <!-- Your existing JS if needed -->
     <script src="javascript/script.js"></script>
 </body>
 </html>
