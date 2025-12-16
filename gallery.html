@@ -285,8 +285,9 @@
   </div>
 
   <script src="javascript/script.js"></script>
+
+  <!-- Existing Lightbox JS (unchanged) -->
   <script>
-    // Your lightbox JS (unchanged)
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const closeBtn = document.querySelector('.lightbox-close');
@@ -309,6 +310,52 @@
       if (e.target === lightbox) {
         lightbox.style.display = 'none';
       }
+    });
+  </script>
+
+  <!-- NEW: Masonry layout JavaScript (eliminates white gaps) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const grid = document.querySelector('.gallery-grid');
+      if (!grid) return;
+
+      const items = grid.querySelectorAll('.gallery-item');
+
+      function applyMasonry() {
+        items.forEach(item => {
+          const img = item.querySelector('img');
+          if (img && img.complete) {
+            const rowHeight = 10;
+            const rowSpan = Math.ceil(img.offsetHeight / rowHeight + 10); // small buffer
+            item.style.gridRowEnd = `span ${rowSpan}`;
+          }
+        });
+      }
+
+      // Run after images load
+      let loaded = 0;
+      const total = items.length;
+
+      if (total === 0) return;
+
+      items.forEach(item => {
+        const img = item.querySelector('img');
+        if (img.complete) {
+          loaded++;
+        } else {
+          img.addEventListener('load', () => {
+            loaded++;
+            if (loaded === total) applyMasonry();
+          });
+        }
+      });
+
+      if (loaded === total) applyMasonry();
+
+      // Re-run on resize
+      window.addEventListener('resize', () => {
+        setTimeout(applyMasonry, 300);
+      });
     });
   </script>
 </body>
